@@ -1,0 +1,183 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  font-size: 62.5%;
+
+  --ff-primary: 'Roboto', sans-serif;
+  --text-color:  #E1E1E6;
+
+  --hue: 192;
+  --primary-color: hsl(var(--hue), 75%, 13%, 1);
+  --secondery-color: hsla(192, 65%, 7%, 1)
+}
+
+body{
+  
+  font-size: 1.6rem;
+  color: var(--text-color);
+  background-color: #000000;
+}
+
+body * {
+  font-family: var(--ff-primary);
+
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0,);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+#app{
+  padding: 2rem;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin: 2.5rem 0;
+  margin-bottom: 8.7rem;
+}
+
+
+.search {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+}
+
+.search input {
+  background-color: var(--secondery-color);
+  color: var(--text-color);
+
+  width: 46rem;
+  height: 4.8rem;
+  font-size: 16px;
+  line-height: 100%;
+
+  border-radius: .4rem;
+  border: none;
+
+  padding: 0 .8rem;
+}
+
+.search button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  height: 4.8rem;
+  width: 17rem;
+
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 2.4rem;
+
+  color: var(--text-color);
+  background-color: var(--primary-color);
+
+  border-radius: .4rem;
+  border: none;
+  padding: 1rem;
+
+  cursor: pointer;
+
+  transition: all .3s;
+}
+
+.search button:hover{
+  background: #FFFFFF;
+
+  color: #065E7C;
+  fill: #065E7C;
+}
+
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+
+  box-shadow: 0 1rem 2rem -1rem rgba(0, 0, 0, 0.3);
+}
+
+table * {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--text-color);
+}
+
+table th{
+  background: var(--primary-color);
+  text-align: left;
+  font-weight: normal;
+  padding: 1.5rem;
+}
+
+td.user img {
+  width: 5rem;
+  height: 5rem;
+
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+table th:first-child{
+  border-top-left-radius: .4rem;
+}
+
+table th:last-child{
+  border-top-right-radius: .4rem;
+}
+
+table tr:nth-child(even) {
+  background: var(--primary-color);
+}
+
+table tr:nth-child(odd) {
+  background: var(--secondery-color);
+}
+
+table td {
+  padding: 1.5rem;
+  text-align: left;
+}
+
+td.user {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+td.user a {
+  text-decoration: none;
+}
+
+td.user a p {
+  font-weight: bold;
+}
+
+td .remove {
+  background: none;
+  border: none;
+  color: red;
+
+  cursor: pointer;
+}
